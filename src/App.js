@@ -7,13 +7,15 @@ function App() {
   console.log(taskList);
   return (
   <>
-  <h1>ToDo_Board</h1>
+  <div className='flex flex-col items-center justify-center py-8'>
+  <h1 className='text-xl font-semibold'>ToDo_Board</h1>
   <Input taskList={taskList} setTaskList={setTaskList}/>
   <div>
    {taskList.map((task,index)=>
   <li key={index}>
     {task}
   </li>)}
+  </div>
   </div>
   </>
   );
